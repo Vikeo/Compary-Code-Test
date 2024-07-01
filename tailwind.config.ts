@@ -8,7 +8,7 @@ export const baseColors = {
   background: {
     primary: '#18171F',
     secondary: '#24232C',
-
+    black: '#08070B',
   },
   password_strength: {
     strong: '#A4FFAF',
@@ -24,7 +24,15 @@ export default {
   theme: {
     extend: {
       colors: baseColors,
+      fontSize: {
+        '3xl': [
+          '2rem',
+          {
+            lineHeight: '2.64rem',
+            fontWeight: '700',
+          },
+        ],
+      },
     },
   },
 } satisfies Config;
-

@@ -1,73 +1,18 @@
-enum Strength {
+export enum Strength {
   TOO_WEAK = 'TOO WEAK!',
   WEAK = 'WEAK',
   MEDIUM = 'MEDIUM',
   STRONG = 'STRONG',
 }
 
-const getPasswordStrength = (
-  passwordLength: number,
-  includeUppercase: boolean,
-  includeLowercase: boolean,
-  includeNumbers: boolean,
-  includeSymbols: boolean
-) => {
-  if (passwordLength < 8) {
-    return Strength.TOO_WEAK;
-  }
-
-  if (!includeUppercase && !includeLowercase) {
-    return Strength.TOO_WEAK;
-  }
-
-  if (!includeNumbers && !includeSymbols) {
-    return Strength.TOO_WEAK;
-  }
-
-  if (
-    includeUppercase &&
-    includeLowercase &&
-    includeNumbers &&
-    includeSymbols
-  ) {
-    return Strength.STRONG;
-  }
-
-  if (
-    includeUppercase &&
-    includeLowercase &&
-    (includeNumbers || includeSymbols)
-  ) {
-    return Strength.MEDIUM;
-  }
-
-  return Strength.WEAK;
-};
-
 export const PasswordStrength = ({
-  passwordLength,
-  includeUppercase,
-  includeLowercase,
-  includeNumbers,
-  includeSymbols,
+  passwordStrength,
 }: {
-  passwordLength: number;
-  includeUppercase: boolean;
-  includeLowercase: boolean;
-  includeNumbers: boolean;
-  includeSymbols: boolean;
+  passwordStrength: Strength;
 }) => {
-  const strength = getPasswordStrength(
-    passwordLength,
-    includeUppercase,
-    includeLowercase,
-    includeNumbers,
-    includeSymbols
-  );
-
   let strengthMeterElement: JSX.Element | null = null;
 
-  switch (strength) {
+  switch (passwordStrength) {
     case Strength.STRONG:
       strengthMeterElement = (
         <div className="flex gap-2">
@@ -112,10 +57,10 @@ export const PasswordStrength = ({
   }
 
   return (
-    <div className="bg-background-primary px-8 py-4 w-full flex justify-between items-center">
+    <div className="bg-background-primary px-8 py-4 w-full flex justify-between items-center mt-8">
       <p className="text-text-secondary">STRENGTH</p>
       <div className="flex gap-4 justify-center items-center">
-        <p className="text-2xl">{strength}</p>
+        <p className="text-2xl">{passwordStrength}</p>
         {strengthMeterElement}
       </div>
     </div>
