@@ -91,7 +91,7 @@ function App() {
   };
 
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center px-4">
+    <div className="size-full flex flex-col justify-center items-center px-4 py-8">
       <p
         className="text-text-secondary mb-4 text-base
       sm:text-2xl sm:mt-4 sm:mb-8"
