@@ -41,7 +41,7 @@ input[type='range']::-webkit-slider-thumb {
   height: 28px;
   width: 28px;
   border-radius: 100px;
-  background: white;
+  background: theme('colors.text.primary');
   cursor: pointer;
   margin-top: -10px;
 }
@@ -68,6 +68,12 @@ input[type='range']::-moz-range-thumb {
   border-radius: 100px;
   cursor: pointer;
   margin-top: -10px;
+  background: theme('colors.text.primary');
+}
+
+input[type='range']::-moz-range-thumb:hover {
+  background: theme('colors.background.primary');
+  border: 2px solid theme('colors.password_strength.strong');
 }
 
 input[type='range']::-ms-track {
@@ -86,4 +92,10 @@ input[type='range']::-ms-thumb {
   border-radius: 100px;
   cursor: pointer;
   margin-top: -10px;
+  background: theme('colors.text.primary');
+}
+
+input[type='range']::-ms-thumb:hover {
+  background: theme('colors.background.primary');
+  border: 2px solid theme('colors.password_strength.strong');
 }

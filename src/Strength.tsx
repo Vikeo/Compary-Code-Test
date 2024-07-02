@@ -57,10 +57,14 @@ export const PasswordStrength = ({
   }
 
   return (
-    <div className="bg-background-primary px-8 py-4 w-full flex justify-between items-center mt-8">
-      <p className="text-text-secondary">STRENGTH</p>
+    <div
+      className="bg-background-primary w-full flex justify-between items-center mt-8
+    px-4 py-[14px]
+    sm:px-8 sm:py-5"
+    >
+      <p className="text-text-secondary text-base sm:text-lg">STRENGTH</p>
       <div className="flex gap-4 justify-center items-center">
-        <p className="text-2xl">{passwordStrength}</p>
+        <p className="text-lg sm:text-2xl">{passwordStrength}</p>
         {strengthMeterElement}
       </div>
     </div>

@@ -24,6 +24,34 @@ export default {
     extend: {
       colors: baseColors,
       fontSize: {
+        base: [
+          '1rem',
+          {
+            lineHeight: '1.32rem',
+            fontWeight: '700',
+          },
+        ],
+        lg: [
+          '1.125rem',
+          {
+            lineHeight: '1.485rem',
+            fontWeight: '700',
+          },
+        ],
+        xl: [
+          '1.25rem',
+          {
+            lineHeight: '1.75rem',
+            fontWeight: '700',
+          },
+        ],
+        '2xl:': [
+          '1.5rem',
+          {
+            lineHeight: '1.98rem',
+            fontWeight: '700',
+          },
+        ],
         '3xl': [
           '2rem',
           {
