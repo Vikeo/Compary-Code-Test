@@ -18,7 +18,6 @@ p {
 
 input[type='range'] {
   -webkit-appearance: none;
-  transition: background 0ms ease-in;
   margin: 10px 0;
   width: 100%;
 }
