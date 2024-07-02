@@ -8,7 +8,6 @@ export const baseColors = {
   background: {
     primary: '#18171F',
     secondary: '#24232C',
-    black: '#08070B',
   },
   password_strength: {
     strong: '#A4FFAF',

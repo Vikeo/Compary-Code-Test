@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: 'JetBrainsMono';
-  src: url('../fonts/JetBrainsMono-VariableFont_wght.ttf');
+  src: url('../public/fonts/JetBrainsMono-VariableFont_wght.ttf');
 }
 
 body {
-  background: theme('colors.background.black');
+  background: theme('colors.background.primary');
 }
 
 p {
